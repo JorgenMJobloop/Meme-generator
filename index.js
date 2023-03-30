@@ -60,6 +60,6 @@ function debugDisplay(meme, random, indexAt) {
   }
   displayMeme.innerHTML = `<img src=${outputArr[
     random
-  ].split()} id="display-meme"/>`; // vet at innerHTML ikke er optimal, se mer på image display m. textContent.
+  ].split()} id="display-meme"/>`; // prefer textContent as opposed to innerHTML.
   return memeArray;
 }
