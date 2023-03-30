@@ -18,23 +18,7 @@ const memeArray = [];
 const genMemeBtn = document.getElementById("new-meme");
 const displayMeme = document.getElementById("display-meme");
 const resetButton = document.getElementById("reset-meme");
-/*
-function getNewMeme(memes) {
-  for (let memes of memeObject) {
-    for (let images of memes.image) {
-      memeArray.push(memes.image.indexOf(images.split("")));
-    }
-  }
-  return memeArray;
-}
-
-function renderMeme(random) {
-  getNewMeme();
-  random = Math.floor(Math.random() * memeArray.length);
-  displayMeme.innerHTML = `<img src="${memeArray[random]}"/>`;
-}
-*/
-
+// Removed old comments of previous code.
 function reset() {
   displayMeme.innerHTML = "";
 }
@@ -42,11 +26,8 @@ function reset() {
 function debugDisplay(meme, random, indexAt) {
   const outputArr = [];
   random = Math.floor(Math.random() * memeIMGsrc.length);
-  /*  for (let meme of memeIMGsrc) {
-    for (let i of memeIMGsrc) {
-      memeArray.push(i.split());
-    }
-*/ for (let i = 0; i < memeIMGsrc.length; i++) {
+
+  for (let i = 0; i < memeIMGsrc.length; i++) {
     indexAt += 1;
     outputArr.push(memeIMGsrc[i]);
     if (indexAt > outputArr.length) {
@@ -60,6 +41,7 @@ function debugDisplay(meme, random, indexAt) {
   }
   displayMeme.innerHTML = `<img src=${outputArr[
     random
-  ].split()} id="display-meme"/>`; // prefer textContent as opposed to innerHTML.
+  ].split()} id="display-meme"/>`; // prefer textContent over innerHTML.
   return memeArray;
 }
+
