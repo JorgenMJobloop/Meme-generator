@@ -22,8 +22,11 @@ const resetButton = document.getElementById("reset-meme");
 function reset() {
   displayMeme.innerHTML = "";
 }
+// takes in two parameters, random and indexAt.
+// random "randomizes" the index of the image in the array.
+// and indexAt iterates through the elements lenght starting from 0.
 
-function debugDisplay(meme, random, indexAt) {
+function debugDisplay(random, indexAt) {
   const outputArr = [];
   random = Math.floor(Math.random() * memeIMGsrc.length);
 
@@ -44,4 +47,3 @@ function debugDisplay(meme, random, indexAt) {
   ].split()} id="display-meme"/>`; // prefer textContent over innerHTML.
   return memeArray;
 }
-
