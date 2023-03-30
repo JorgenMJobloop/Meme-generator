@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memes for days</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Memes</h1>
+    </div>
+    <section class="main-section">
+      <div class="flex-container">
+        <button class="buttons" id="new-meme" onclick="debugDisplay()">
+          Get random meme
+        </button>
+        <button class="buttons" id="reset-btn" onclick="reset()">Reset</button>
+        <p>Get your dank memes here!</p>
+        <div class="flex-container-images">
+          <div id="reset-meme"></div>
+          <div id="display-meme"></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p class="about">about</p>
+      <a href="#" class="footer-links">HOME</a>
+    </footer>
+  </body>
+</html>
