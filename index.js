@@ -3,6 +3,14 @@ const memeIMGsrc = [
   "images/dank-meme.gif",
   "images/frog1.png",
   "images/cartoon-peter.jpeg",
+  "images/sus-ur.gif",
+  "images/maxresdefault.jpg",
+  "images/shrek1.jpeg",
+  "images/billnye.jpg",
+  "images/lag.gif",
+  "images/general-chat.gif",
+  "images/memes.gif",
+  "images/meme-shrek.gif",
 ];
 
 const memeArray = [];

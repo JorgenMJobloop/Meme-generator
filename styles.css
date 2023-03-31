@@ -1,11 +1,18 @@
-body {
+* {
   margin: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Ubuntu Mono", monospace;
   color: #ffffff;
   background-image: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700342881.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  line-break: normal;
 }
+
 h1 {
   font-weight: 700;
   text-align: center;
@@ -13,16 +20,10 @@ h1 {
 }
 
 .header {
-  box-sizing: border-box;
   align-items: center;
   justify-content: center;
 }
-/*
-.main-section {
-  box-sizing: border-box;
-  background-color: rgb(39, 6, 6);
-}
-*/
+
 .flex-container {
   display: flex;
   align-items: center;
@@ -46,14 +47,14 @@ h1 {
 
 #display-meme {
   width: auto;
-  max-width: max-content;
+  max-width: 100vh;
   height: auto;
-  max-height: max-content;
+  min-height: fit-content;
   border-radius: 10px;
-  box-shadow: 0 0 5 0 slategray;
+  box-shadow: 0 0 5 0 rgb(0, 0, 0);
   align-items: center;
   justify-content: center;
-  border: 2px solid rgb(148, 125, 125);
+  border: 2px solid rgb(34, 31, 31);
 }
 
 .buttons {
@@ -62,10 +63,9 @@ h1 {
   height: auto;
   width: auto;
   color: #ffffff;
-  background: -moz-radial-gradient(rgb(197, 14, 14), rgba(0, 0, 0, 0.164));
+  background: -moz-radial-gradient(rgb(255, 0, 0), rgba(165, 0, 0, 0.164));
   justify-content: space-between;
   border-radius: 5px;
-  size-adjust: 60%;
   font-size: large;
   font-weight: 700;
 }
@@ -78,7 +78,7 @@ h1 {
 }
 
 .footer {
-  position: fixed;
+  position: relative;
   font-size: small;
   font-weight: 400;
   color: #ffffff;
@@ -87,8 +87,10 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
 }
 
 a {
-  color: aliceblue;
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
 }
