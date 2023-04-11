@@ -11,6 +11,11 @@ const memeIMGsrc = [
   "images/general-chat.gif",
   "images/memes.gif",
   "images/meme-shrek.gif",
+  "images/avatars-000216201090-dqx4ac-t500x500.jpg",
+  "images/avatars-000432308172-ko4j58-t500x500.jpg",
+  "images/hao5qjn8175a1.webp",
+  "images/lol-funny-memes.gif",
+  "images/just-about-mcfucking-had.png",
 ];
 
 const memeArray = [];
