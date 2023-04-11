@@ -73,8 +73,8 @@ h1 {
 .buttons:hover {
   background-color: crimson;
   color: #ffffff;
-  padding: 11px;
-  margin: 6px;
+  /*padding: 11px;
+  margin: 6px;*/
 }
 
 .footer {
