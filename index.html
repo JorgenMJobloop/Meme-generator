@@ -19,21 +19,34 @@
       <h1>Memes</h1>
     </div>
     <section class="main-section">
-      <div class="flex-container">
-        <button class="buttons" id="new-meme" onclick="debugDisplay()">
-          Get random meme
-        </button>
-        <button class="buttons" id="reset-btn" onclick="reset()">Reset</button>
-        <p>Get your dank memes here!</p>
-        <div class="flex-container-images">
-          <div id="reset-meme"></div>
-          <div id="display-meme"></div>
-        </div>
+      <div class="flex-container-images">
+        <div id="display-meme"></div>
+        <div id="reset-meme"></div>
       </div>
+      <span id="share-image"> </span>
     </section>
-    <footer class="footer">
-      <p class="about">about</p>
-      <a href="#" class="footer-links">HOME</a>
+    <div class="button-container">
+      <button class="buttons" id="new-meme" onclick="debugDisplay()">
+        New meme
+      </button>
+      <button class="buttons" id="reset-btn" onclick="reset()">Reset</button>
+    </div>
+    <p>Get your dank memes here!</p>
+    <footer class="footer-container">
+      <a
+        href="https://github.com/jorgen-kodehode/Meme-generator"
+        target="_blank"
+        >Sourcecode</a
+      >
+      <p>Legal</p>
+      <p>
+        Is somthing not working on the site?
+        <a
+          href="https://github.com/jorgen-kodehode/Meme-generator/issues"
+          target="_blank"
+          >click here to report an issue at github</a
+        >
+      </p>
     </footer>
   </body>
 </html>

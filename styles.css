@@ -4,11 +4,31 @@
   box-sizing: border-box;
 }
 
+.header {
+  background-image: url("images/header-meme.png");
+  background-size: contain;
+  width: 100%;
+  height: 15%;
+  border: 2px solid rgb(38, 4, 39);
+  border-radius: 6px;
+  filter: opacity(0.7);
+  background-attachment: scroll;
+  margin: 0;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
 body {
   font-family: "Ubuntu Mono", monospace;
   color: #ffffff;
-  background-image: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700342881.jpg");
-  background-size: cover;
+  background: rgb(2, 0, 36);
+  background-color: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(78, 11, 133, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  /* background-size: cover; */
   background-repeat: no-repeat;
   line-break: normal;
 }
@@ -17,80 +37,99 @@ h1 {
   font-weight: 700;
   text-align: center;
   text-shadow: black;
+  color: #ffffff;
+}
+.main-section {
+  background-image: url("https://wallpapercave.com/wp/wp8304085.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
 }
 
-.header {
-  align-items: center;
-  justify-content: center;
-}
-
-.flex-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
 .flex-container-images {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  height: auto;
-  width: auto;
-  box-shadow: 0 2 0 2 black;
+  box-shadow: 0 2 0 2 rgb(0, 0, 0);
   border-radius: 10px;
+  padding: 25px 0 0 10px;
 }
-
 #display-meme {
-  width: auto;
-  max-width: 100vh;
-  height: auto;
-  min-height: fit-content;
+  width: 50vh;
+  height: 50vh;
+  min-width: 320px;
+  min-height: 480px;
   border-radius: 10px;
-  box-shadow: 0 0 5 0 rgb(0, 0, 0);
-  align-items: center;
+  border: none;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  border: 2px solid rgb(34, 31, 31);
+  align-items: center;
+  flex-wrap: wrap;
+  border: none;
+  height: 2%;
+  margin: 10px 25px 20px 10px;
 }
 
-.buttons {
-  padding: 10px;
-  margin: 5px;
-  height: auto;
-  width: auto;
+#new-meme {
+  margin-right: 15px;
   color: #ffffff;
-  background: -moz-radial-gradient(rgb(255, 0, 0), rgba(165, 0, 0, 0.164));
-  justify-content: space-between;
-  border-radius: 5px;
-  font-size: large;
-  font-weight: 700;
+  background-color: #8652c2;
+  border: none;
+  border-radius: 4px;
+  font-size: 32px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
 }
 
-.buttons:hover {
-  background-color: crimson;
+#reset-btn {
+  margin-left: 3px;
   color: #ffffff;
+  background-color: #8652c2;
+  border: none;
+  border-radius: 4px;
+  font-size: 32px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+#new-meme:hover,
+#reset-btn:hover {
+  background-color: rgb(106, 19, 109);
+  color: #ffffff;
+  font-weight: bold;
   /*padding: 11px;
   margin: 6px;*/
 }
 
-.footer {
-  position: relative;
+.footer-container {
+  display: flex;
+  background-color: #3a2849;
+  border-radius: 4px;
+  width: 100%;
+  height: 1;
   font-size: small;
   font-weight: 400;
   color: #ffffff;
-  text-align: center;
-  box-sizing: border-box;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  font-variant: small-caps;
   bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
+  position: absolute;
 }
 
+p {
+  text-align: center;
+  /* margin-bottom: 15px; */
+}
 a {
-  color: rgb(255, 255, 255);
+  color: rgb(230, 230, 230);
   text-decoration: underline;
 }

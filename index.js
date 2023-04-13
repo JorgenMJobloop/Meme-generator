@@ -22,6 +22,7 @@ const memeArray = [];
 const genMemeBtn = document.getElementById("new-meme");
 const displayMeme = document.getElementById("display-meme");
 const resetButton = document.getElementById("reset-meme");
+
 // Removed old comments of previous code.
 function reset() {
   displayMeme.innerHTML = "";
