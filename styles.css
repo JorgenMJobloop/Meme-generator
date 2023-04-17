@@ -11,7 +11,7 @@
   height: 15%;
   border: 2px solid rgb(38, 4, 39);
   border-radius: 6px;
-  filter: opacity(0.7);
+  filter: opacity(0.55);
   background-attachment: scroll;
   margin: 0;
   font-size: 24px;
@@ -40,7 +40,7 @@ h1 {
   color: #ffffff;
 }
 .main-section {
-  background-image: url("https://wallpapercave.com/wp/wp8304085.jpg");
+  background-image: url("https://free4kwallpapers.com/uploads/originals/2019/04/01/dark-purple-wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 70vh;
@@ -54,9 +54,12 @@ h1 {
   border-radius: 10px;
   padding: 25px 0 0 10px;
 }
+#share {
+  text-align: center;
+}
 #display-meme {
   width: 50vh;
-  height: 50vh;
+  height: 60vh;
   min-width: 320px;
   min-height: 480px;
   border-radius: 10px;
@@ -65,39 +68,40 @@ h1 {
 
 .button-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;
   border: none;
-  height: 2%;
-  margin: 10px 25px 20px 10px;
 }
 
 #new-meme {
-  margin-right: 15px;
   color: #ffffff;
-  background-color: #8652c2;
+  background-color: #250d3f;
   border: none;
   border-radius: 4px;
   font-size: 32px;
   font-weight: bold;
-  padding-left: 10px;
-  padding-right: 10px;
   margin-top: 10px;
 }
 
 #reset-btn {
-  margin-left: 3px;
   color: #ffffff;
-  background-color: #8652c2;
+  background-color: #250d3f;
   border: none;
   border-radius: 4px;
   font-size: 32px;
   font-weight: bold;
-  padding-left: 10px;
-  padding-right: 10px;
   margin-top: 10px;
+}
+
+#share {
+  text-align: center;
+  align-items: center;
+  border: none;
+}
+#share-url {
+  color: #ffffff;
+  clip: auto;
 }
 #new-meme:hover,
 #reset-btn:hover {
@@ -123,6 +127,7 @@ h1 {
   font-variant: small-caps;
   bottom: 0;
   position: absolute;
+  background-attachment: fixed;
 }
 
 p {

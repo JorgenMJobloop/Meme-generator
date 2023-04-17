@@ -22,10 +22,15 @@ const memeArray = [];
 const genMemeBtn = document.getElementById("new-meme");
 const displayMeme = document.getElementById("display-meme");
 const resetButton = document.getElementById("reset-meme");
+const shareSpan = document.getElementById("share");
+const shareNewUrl = document.getElementById("share-url");
+const shareOutputUrl = document.getElementById("share-output");
 
 // Removed old comments of previous code.
+// resets the innerHTML.
 function reset() {
   displayMeme.innerHTML = "";
+  shareOutputUrl.textContent = "";
 }
 // takes in two parameters, random and indexAt.
 // random "randomizes" the index of the image in the array.
@@ -34,7 +39,6 @@ function reset() {
 function debugDisplay(random, indexAt) {
   const outputArr = [];
   random = Math.floor(Math.random() * memeIMGsrc.length);
-
   for (let i = 0; i < memeIMGsrc.length; i++) {
     indexAt += 1;
     outputArr.push(memeIMGsrc[i]);
@@ -50,5 +54,12 @@ function debugDisplay(random, indexAt) {
   displayMeme.innerHTML = `<img src=${outputArr[
     random
   ].split()} id="display-meme"/>`; // prefer textContent over innerHTML.
+  shareNewUrl.addEventListener("click", function (prefix, copyUrl) {
+    prefix = `https://Meme-generator/${outputArr[random]}`;
+    copyUrl = window.location.href.concat(prefix);
+    navigator.clipboard.writeText(copyUrl);
+    shareOutputUrl.textContent = "Copied link to clipboard";
+  });
+  shareOutputUrl.textContent = "";
   return memeArray;
 }
