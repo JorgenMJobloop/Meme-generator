@@ -16,6 +16,8 @@ const memeIMGsrc = [
   "images/hao5qjn8175a1.webp",
   "images/lol-funny-memes.gif",
   "images/just-about-mcfucking-had.png",
+  "images/memes.png",
+  "images/limp.png",
 ];
 
 const memeArray = [];
@@ -30,6 +32,7 @@ const shareOutputUrl = document.getElementById("share-output");
 // resets the innerHTML.
 function reset() {
   displayMeme.innerHTML = "";
+  shareNewUrl.textContent = "";
   shareOutputUrl.textContent = "";
 }
 // takes in two parameters, random and indexAt.
@@ -38,6 +41,7 @@ function reset() {
 
 function debugDisplay(random, indexAt) {
   const outputArr = [];
+  shareNewUrl.textContent = "Share this meme!";
   random = Math.floor(Math.random() * memeIMGsrc.length);
   for (let i = 0; i < memeIMGsrc.length; i++) {
     indexAt += 1;
@@ -58,7 +62,7 @@ function debugDisplay(random, indexAt) {
     prefix = `https://Meme-generator/${outputArr[random]}`;
     copyUrl = window.location.href.concat(prefix);
     navigator.clipboard.writeText(copyUrl);
-    shareOutputUrl.textContent = "Copied link to clipboard";
+    shareOutputUrl.textContent = "Image link copied to clipboard";
   });
   shareOutputUrl.textContent = "";
   return memeArray;

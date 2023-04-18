@@ -31,6 +31,7 @@ body {
   /* background-size: cover; */
   background-repeat: no-repeat;
   line-break: normal;
+  min-height: 100vh;
 }
 
 h1 {
@@ -54,9 +55,6 @@ h1 {
   border-radius: 10px;
   padding: 25px 0 0 10px;
 }
-#share {
-  text-align: center;
-}
 #display-meme {
   width: 50vh;
   height: 60vh;
@@ -68,9 +66,10 @@ h1 {
 
 .button-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 15px;
   border: none;
 }
 
@@ -78,38 +77,57 @@ h1 {
   color: #ffffff;
   background-color: #250d3f;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px #23063f;
   font-size: 32px;
-  font-weight: bold;
-  margin-top: 10px;
+  font-weight: 600;
+  margin-top: 25px;
+  cursor: pointer;
 }
 
 #reset-btn {
   color: #ffffff;
   background-color: #250d3f;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 32px;
-  font-weight: bold;
-  margin-top: 10px;
+  font-weight: 600;
+  margin-top: 25px;
+  cursor: pointer;
 }
 
 #share {
   text-align: center;
-  align-items: center;
-  border: none;
 }
 #share-url {
   color: #ffffff;
-  clip: auto;
+  text-align: center;
+  cursor: pointer;
 }
+#share-url:active {
+  color: #ffe5e5;
+  transition: 200ms all ease-in-out;
+  font-weight: 500;
+}
+
 #new-meme:hover,
 #reset-btn:hover {
-  background-color: rgb(106, 19, 109);
+  background-color: rgb(107, 21, 110);
   color: #ffffff;
   font-weight: bold;
-  /*padding: 11px;
-  margin: 6px;*/
+  transition: 200ms all ease-in-out;
+}
+
+#new-meme:focus,
+#reset-btn:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 4px scale-color(#23063f);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
 }
 
 .footer-container {
@@ -117,7 +135,6 @@ h1 {
   background-color: #3a2849;
   border-radius: 4px;
   width: 100%;
-  height: 1;
   font-size: small;
   font-weight: 400;
   color: #ffffff;
@@ -125,9 +142,6 @@ h1 {
   align-items: center;
   flex-direction: column;
   font-variant: small-caps;
-  bottom: 0;
-  position: absolute;
-  background-attachment: fixed;
 }
 
 p {
@@ -135,6 +149,11 @@ p {
   /* margin-bottom: 15px; */
 }
 a {
-  color: rgb(230, 230, 230);
+  color: rgb(255, 255, 255);
   text-decoration: underline;
+}
+a:hover {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 700;
 }
