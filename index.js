@@ -18,6 +18,13 @@ const memeIMGsrc = [
   "images/just-about-mcfucking-had.png",
   "images/memes.png",
   "images/limp.png",
+  "images/barbie.png",
+  "images/dank-2.png",
+  "images/doggo.png",
+  "images/twinpeaks.png",
+  "images/metalcore.png",
+  "images/castlevania.png",
+  "images/heavyhair.png",
 ];
 
 const memeArray = [];
@@ -58,9 +65,10 @@ function debugDisplay(random, indexAt) {
   displayMeme.innerHTML = `<img src=${outputArr[
     random
   ].split()} id="display-meme"/>`; // prefer textContent over innerHTML.
-  shareNewUrl.addEventListener("click", function (prefix, copyUrl) {
-    prefix = `https://Meme-generator/${outputArr[random]}`;
-    copyUrl = window.location.href.concat(prefix);
+  shareNewUrl.addEventListener("click", function (prefix, copyUrl, path) {
+    path = "/Meme-generator/";
+    prefix = `${outputArr[random]}`;
+    copyUrl = window.location.href.concat(prefix).replace("/index.html", "/");
     navigator.clipboard.writeText(copyUrl);
     shareOutputUrl.textContent = "Image link copied to clipboard";
   });
