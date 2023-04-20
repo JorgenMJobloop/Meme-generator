@@ -179,7 +179,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: #ffffff;
+  color: #eeb4ff;
   cursor: pointer;
   font-size: 700;
 }
