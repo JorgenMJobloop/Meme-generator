@@ -9,7 +9,7 @@
   background-size: contain;
   width: 100%;
   height: 15%;
-  border: 2px solid rgb(38, 4, 39);
+  border: 0.3px solid #8d076b;
   border-radius: 6px;
   filter: opacity(0.55);
   background-attachment: scroll;
@@ -75,7 +75,7 @@ h1 {
 #new-meme {
   color: #ffffff;
   background-color: #250d3f;
-  border: 0.3px solid #5107a0;
+  border: 0.3px solid #860642;
   border-radius: 12px;
   box-shadow: 0 3px 5px #23063f;
   font-size: 32px;
@@ -84,17 +84,19 @@ h1 {
   margin-top: 25px;
   cursor: pointer;
   text-align: center;
+  margin-bottom: 2%;
 }
 
 #reset-btn {
-  color: #f7eaea;
+  color: #fad6e8;
   background-color: #25023f;
-  border: 0.3px solid #48098b;
+  border: 0.3px solid #9b093a;
   border-radius: 12px;
   font-size: 32px;
   font-weight: 600;
   margin-top: 25px;
   cursor: pointer;
+  margin-bottom: 2%;
 }
 
 #share {
@@ -104,15 +106,31 @@ h1 {
   color: #ffffff;
   text-align: center;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 22px;
 }
-#share-url:active {
-  color: #ffe5e5;
+#share-url:hover {
+  color: #db0079;
   transition: 200ms all ease-in-out;
   font-weight: 500;
+  font-size: 22px;
+}
+#share-url:active {
+  color: #c7006d;
+  transition: 200ms all ease-in-out;
+  font-weight: 500;
+  font-size: 22px;
+}
+#share-output {
+  font-style: italic;
 }
 
-#new-meme:hover,
+#new-meme:hover {
+  background-color: #25023f;
+  border: 0.3px solid #99113a;
+  color: #ff0682;
+  transition: 200ms all ease-in-out;
+}
 #reset-btn:hover {
   background-color: rgb(64, 5, 66);
   color: #ffffff;
@@ -157,4 +175,26 @@ a:hover {
   color: #ffffff;
   cursor: pointer;
   font-size: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+  #new-meme,
+  #reset-meme {
+    animation: none;
+  }
+}
+/* For smartphones*/
+@media only screen and (min-device-width: 480px) {
+  body {
+    box-sizing: border-box;
+  }
+}
+/* For tablets*/
+@media only screen and(min-device-width:768px) {
+  body {
+    box-sizing: border-box;
+  }
 }
