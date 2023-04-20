@@ -45,15 +45,19 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
   height: 70vh;
+  border: 2px solid #ffd000;
+  margin-bottom: 2%;
 }
 
 .flex-container-images {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
+  grid-area: auto;
   box-shadow: 0 2 0 2 rgb(0, 0, 0);
   border-radius: 10px;
-  padding: 25px 0 0 10px;
+  padding: 2% 0 0 1%;
+  border: 2px solid #ff0077;
 }
 #display-meme {
   width: 50vh;
@@ -69,7 +73,9 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  border: none;
+  margin-top: 0.1%;
+  margin-bottom: 0.8%;
+  border: 2px solid #ffffff;
 }
 
 #new-meme {
@@ -78,13 +84,13 @@ h1 {
   border: 0.3px solid #860642;
   border-radius: 12px;
   box-shadow: 0 3px 5px #23063f;
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 400;
   font-synthesis: weight;
-  margin-top: 25px;
+  margin-top: 1%;
   cursor: pointer;
   text-align: center;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
 
 #reset-btn {
@@ -92,11 +98,11 @@ h1 {
   background-color: #25023f;
   border: 0.3px solid #9b093a;
   border-radius: 12px;
-  font-size: 32px;
-  font-weight: 600;
-  margin-top: 25px;
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 1%;
   cursor: pointer;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
 
 #share {
@@ -114,6 +120,7 @@ h1 {
   transition: 200ms all ease-in-out;
   font-weight: 500;
   font-size: 22px;
+  font-style: oblique;
 }
 #share-url:active {
   color: #c7006d;
@@ -126,9 +133,9 @@ h1 {
 }
 
 #new-meme:hover {
-  background-color: #25023f;
-  border: 0.3px solid #99113a;
-  color: #ff0682;
+  background-color: #120020;
+  border: 0.3px solid #a30031;
+  color: #ffecf5;
   transition: 200ms all ease-in-out;
 }
 #reset-btn:hover {

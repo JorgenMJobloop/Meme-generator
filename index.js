@@ -65,8 +65,7 @@ function debugDisplay(random, indexAt) {
   displayMeme.innerHTML = `<img src=${outputArr[
     random
   ].split()} id="display-meme"/>`; // prefer textContent over innerHTML.
-  shareNewUrl.addEventListener("click", function (prefix, copyUrl, path) {
-    path = "/Meme-generator/";
+  shareNewUrl.addEventListener("click", function (prefix, copyUrl) {
     prefix = `${outputArr[random]}`;
     copyUrl = window.location.href.concat(prefix).replace("/index.html", "/");
     navigator.clipboard.writeText(copyUrl);
