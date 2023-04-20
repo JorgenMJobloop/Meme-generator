@@ -45,7 +45,7 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
   height: 70vh;
-  border: 2px solid #ffd000;
+  border: none;
   margin-bottom: 2%;
 }
 
@@ -57,7 +57,7 @@ h1 {
   box-shadow: 0 2 0 2 rgb(0, 0, 0);
   border-radius: 10px;
   padding: 2% 0 0 1%;
-  border: 2px solid #ff0077;
+  border: none;
 }
 #display-meme {
   width: 50vh;
@@ -75,7 +75,7 @@ h1 {
   gap: 15px;
   margin-top: 0.1%;
   margin-bottom: 0.8%;
-  border: 2px solid #ffffff;
+  border: none;
 }
 
 #new-meme {
