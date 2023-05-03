@@ -36,12 +36,8 @@ const shareNewUrl = document.getElementById("share-url");
 const shareOutputUrl = document.getElementById("share-output");
 const likeButton = document.getElementById("like-button");
 const dislikeButton = document.getElementById("dislike-button");
+const getFiles = document.getElementById("file-inputs").files[0];
 
-likeButton.addEventListener("click", function () {
-  let count = 0;
-  likeButton.style.color = "green";
-  return;
-});
 // Removed old comments of previous code.
 // resets the innerHTML.
 function reset() {
@@ -77,6 +73,11 @@ function debugDisplay(random, indexAt) {
     copyUrl = window.location.href.concat(prefix).replace("/index.html", "/");
     navigator.clipboard.writeText(copyUrl);
     shareOutputUrl.textContent = "Image link copied to clipboard";
+  });
+  likeButton.addEventListener("click", function (getImage, stats) {
+    getImage = `${outputArr[random]}`;
+    stats = 0;
+    shareOutputUrl.textContent = `This meme has ${(stats += 1)} likes`;
   });
   shareOutputUrl.textContent = "";
   return memeArray;

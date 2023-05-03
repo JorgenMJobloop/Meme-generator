@@ -2,10 +2,11 @@
   "name": "meme-generator",
   "version": "1.0.0",
   "description": "meme-generator, web app",
-  "main": "server.ts",
+  "main": "./main",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon -x ts-node api/server.ts"
   },
   "repository": {
     "type": "git",

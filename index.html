@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="images/icon.png" />
-    <script src="index.js" defer></script>
+    <script src="index.js" async></script>
   </head>
   <body>
     <div class="header">
@@ -29,13 +29,13 @@
         </span>
       </div>
     </section>
+    <div class="social-buttons">
+      <button id="like-button"><img src="images/like.png" /></button>
+      <button id="dislike-button">
+        <img src="images/dislike.png" />
+      </button>
+    </div>
     <div class="button-container">
-      <div class="social-buttons">
-        <button id="like-button"><img src="images/Thumbs Up.svg" /></button>
-        <button id="dislike-button">
-          <img src="images/Thumbs Down.svg" />
-        </button>
-      </div>
       <button class="buttons" id="new-meme" onclick="debugDisplay()">
         New meme
       </button>
