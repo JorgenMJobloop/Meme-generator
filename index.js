@@ -34,7 +34,14 @@ const resetButton = document.getElementById("reset-meme");
 const shareSpan = document.getElementById("share");
 const shareNewUrl = document.getElementById("share-url");
 const shareOutputUrl = document.getElementById("share-output");
+const likeButton = document.getElementById("like-button");
+const dislikeButton = document.getElementById("dislike-button");
 
+likeButton.addEventListener("click", function () {
+  let count = 0;
+  likeButton.style.color = "green";
+  return;
+});
 // Removed old comments of previous code.
 // resets the innerHTML.
 function reset() {
