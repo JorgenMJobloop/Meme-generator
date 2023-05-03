@@ -68,14 +68,7 @@ h1 {
 }
 
 .button-container {
-  display: flex;
-  /* flex-direction: column; */
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 0.1%;
-  margin-bottom: 0.8%;
-  border: none;
+  text-align: center;
 }
 
 #new-meme {
@@ -152,6 +145,14 @@ h1 {
 }
 
 #like-button {
+  background-color: inherit;
+  width: 30vw;
+  height: 20vh;
+  border: none;
+  color: white;
+}
+
+#dislike-button {
   background-color: inherit;
   width: 30vw;
   height: 20vh;
