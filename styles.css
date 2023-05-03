@@ -143,6 +143,229 @@ h1 {
   outline-color: transparent;
   box-shadow: 0 0 0 4px scale-color(#23063f);
 }
+
+#like-button {
+  background-color: inherit;
+  width: 30vw;
+  height: 20vh;
+  border: none;
+  color: white;
+}
+
+#dislike-button {
+  background-color: inherit;
+  width: 30vw;
+  height: 20vh;
+  border: none;
+  color: white;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-container {
+  display: flex;
+  background-color: #3a2849;
+  border-radius: 4px;
+  width: 100%;
+  font-size: small;
+  font-weight: 400;
+  color: #ffffff;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  font-variant: small-caps;
+}
+
+p {
+  text-align: center;
+  /* margin-bottom: 15px; */
+}
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+a:hover {
+  color: #eeb4ff;
+  cursor: pointer;
+  font-size: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+  #new-meme,
+  #reset-meme {
+    animation: none;
+  }
+}
+/* For smartphones*/
+@media only screen and (min-device-width: 480px) {
+  body {
+    box-sizing: border-box;
+  }
+}
+/* For tablets*/
+@media only screen and(min-device-width:768px) {
+  body {
+    box-sizing: border-box;
+  }
+}
+* {
+  margin: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.header {
+  background-image: url("images/header-meme.png");
+  background-size: contain;
+  width: 100%;
+  height: 15%;
+  border: 0.3px solid #8d076b;
+  border-radius: 6px;
+  filter: opacity(0.55);
+  background-attachment: scroll;
+  margin: 0;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: "Ubuntu Mono", monospace;
+  color: #ffffff;
+  background: rgb(2, 0, 36);
+  background-color: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(78, 11, 133, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  line-break: normal;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: 700;
+  text-align: center;
+  text-shadow: black;
+  color: #ffffff;
+}
+.main-section {
+  background-image: url("https://free4kwallpapers.com/uploads/originals/2019/04/01/dark-purple-wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  border: none;
+  margin-bottom: 2%;
+}
+
+.flex-container-images {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-area: auto;
+  box-shadow: 0 2 0 2 rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 2% 0 0 1%;
+  border: none;
+}
+#display-meme {
+  width: 50vh;
+  height: 60vh;
+  min-width: 320px;
+  min-height: 480px;
+  border-radius: 10px;
+}
+
+.button-container {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 0.1%;
+  margin-bottom: 0.8%;
+  border: none;
+}
+
+#new-meme {
+  color: #ffffff;
+  background-color: #250d3f;
+  border: 0.3px solid #860642;
+  border-radius: 12px;
+  box-shadow: 0 3px 5px #23063f;
+  font-size: 25px;
+  font-weight: 400;
+  font-synthesis: weight;
+  margin-top: 1%;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+#reset-btn {
+  color: #fad6e8;
+  background-color: #25023f;
+  border: 0.3px solid #9b093a;
+  border-radius: 12px;
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 1%;
+  cursor: pointer;
+  margin-bottom: 1%;
+}
+
+#share {
+  text-align: center;
+}
+#share-url {
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 22px;
+}
+#share-url:hover {
+  color: #db0079;
+  transition: 200ms all ease-in-out;
+  font-weight: 500;
+  font-size: 22px;
+  font-style: oblique;
+}
+#share-url:active {
+  color: #c7006d;
+  transition: 200ms all ease-in-out;
+  font-weight: 500;
+  font-size: 22px;
+}
+#share-output {
+  font-style: italic;
+}
+
+#new-meme:hover {
+  background-color: #120020;
+  border: 0.3px solid #a30031;
+  color: #ffecf5;
+  transition: 200ms all ease-in-out;
+}
+#reset-btn:hover {
+  background-color: rgb(64, 5, 66);
+  color: #ffffff;
+  transition: 200ms all ease-in-out;
+}
+
+#new-meme:focus,
+#reset-btn:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 4px scale-color(#23063f);
+}
 .social-buttons {
   display: flex;
   flex-direction: row;
@@ -163,7 +386,6 @@ h1 {
   border: none;
   border-radius: 4px;
 }
-
 footer {
   position: relative;
   bottom: 0;
