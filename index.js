@@ -79,6 +79,11 @@ function debugDisplay(random, indexAt) {
     stats = 0;
     shareOutputUrl.textContent = `This meme has ${(stats += 1)} likes`;
   });
+  dislikeButton.addEventListener("click", function (getImage, stats) {
+    getImage = `${outputArr[random]}`;
+    stats = 0;
+    shareOutputUrl.textContent = `This meme has ${(stats += 1)} dislikes`;
+  });
   shareOutputUrl.textContent = "";
   return memeArray;
 }
