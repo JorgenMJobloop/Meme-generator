@@ -25,6 +25,11 @@ const memeIMGsrc = [
   "images/metalcore.png",
   "images/castlevania.png",
   "images/heavyhair.png",
+  "images/832-pm-google-learn-c-843-pm-google-learn-python-made-with-mematic.png",
+  "images/new-language.jpg",
+  "images/error.png",
+  "images/coding_praising_meme.webp",
+  "images/",
 ];
 
 const memeArray = [];
