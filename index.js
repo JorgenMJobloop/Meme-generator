@@ -29,7 +29,6 @@ const memeIMGsrc = [
   "images/new-language.jpg",
   "images/error.png",
   "images/coding_praising_meme.webp",
-  "images/",
 ];
 
 const memeArray = [];
