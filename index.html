@@ -16,46 +16,17 @@
     <script src="index.js" async></script>
   </head>
   <body>
-    <div class="header">
-      <h1>More memes</h1>
-    </div>
     <section class="main-section">
-      <div class="flex-container-images">
-        <div id="display-meme"></div>
-        <div id="reset-meme"></div>
-        <span id="share">
-          <div id="share-url"></div>
-          <p id="share-output"></p>
-        </span>
-      </div>
+      <div id="display-meme"></div>
     </section>
-    <div class="social-buttons">
-      <button id="like-button"><img src="images/like.png" /></button>
-      <button id="dislike-button">
-        <img src="images/dislike.png" />
-      </button>
-    </div>
     <div class="button-container">
       <button class="buttons" id="new-meme" onclick="debugDisplay()">
-        New meme
+        Next
       </button>
-      <button class="buttons" id="reset-btn" onclick="reset()">Reset</button>
+      <span id="share">
+        <div id="share-url"></div>
+        <p id="share-output"></p>
+      </span>
     </div>
-    <p>Get your dank memes here!</p>
-    <footer class="footer-container">
-      <a
-        href="https://github.com/jorgen-kodehode/Meme-generator"
-        target="_blank"
-        >Sourcecode</a
-      >
-      <p>
-        Is somthing not working on the site?
-        <a
-          href="https://github.com/jorgen-kodehode/Meme-generator/issues"
-          target="_blank"
-          >click here to report an issue at github</a
-        >
-      </p>
-    </footer>
   </body>
 </html>

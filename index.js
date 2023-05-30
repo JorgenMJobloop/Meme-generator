@@ -34,21 +34,22 @@ const memeIMGsrc = [
 const memeArray = [];
 const genMemeBtn = document.getElementById("new-meme");
 const displayMeme = document.getElementById("display-meme");
-const resetButton = document.getElementById("reset-meme");
 const shareSpan = document.getElementById("share");
 const shareNewUrl = document.getElementById("share-url");
 const shareOutputUrl = document.getElementById("share-output");
-const likeButton = document.getElementById("like-button");
-const dislikeButton = document.getElementById("dislike-button");
-const getFiles = document.getElementById("file-inputs").files[0];
+
+async function getDynamicMemes() {
+  const response = await fetch("https://api.imgflip.com/get_memes"); // uses the GET HTTP Method.
+  const jsonData = await response.json();
+  console.log(jsonData);
+  let outputArray = Object.entries(jsonData);
+  for (o in outputArray) {
+    outputArray.push(o);
+  }
+  displayMeme.innerHTML = `<img src=${outputArray} id="display-meme"/>`;
+}
 
 // Removed old comments of previous code.
-// resets the innerHTML.
-function reset() {
-  displayMeme.innerHTML = "";
-  shareNewUrl.textContent = "";
-  shareOutputUrl.textContent = "";
-}
 // takes in two parameters, random and indexAt.
 // random "randomizes" the index of the image in the array.
 // and indexAt iterates through the elements lenght starting from 0.
@@ -77,16 +78,6 @@ function debugDisplay(random, indexAt) {
     copyUrl = window.location.href.concat(prefix).replace("/index.html", "/");
     navigator.clipboard.writeText(copyUrl);
     shareOutputUrl.textContent = "Image link copied to clipboard";
-  });
-  likeButton.addEventListener("click", function (getImage, stats) {
-    getImage = `${outputArr[random]}`;
-    stats = 0;
-    shareOutputUrl.textContent = `This meme has ${(stats += 1)} likes`;
-  });
-  dislikeButton.addEventListener("click", function (getImage, stats) {
-    getImage = `${outputArr[random]}`;
-    stats = 0;
-    shareOutputUrl.textContent = `This meme has ${(stats += 1)} dislikes`;
   });
   shareOutputUrl.textContent = "";
   return memeArray;
