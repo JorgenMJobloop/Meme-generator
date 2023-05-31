@@ -13,14 +13,18 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="images/icon.png" />
-    <script src="index.js" async></script>
+    <script src="index.js" defer></script>
   </head>
   <body>
     <section class="main-section">
       <div id="display-meme"></div>
     </section>
     <div class="button-container">
-      <button class="buttons" id="new-meme" onclick="debugDisplay()">
+      <button
+        class="buttons"
+        id="new-meme"
+        onclick="debugDisplay(); getDynamicMemes();"
+      >
         Next
       </button>
       <span id="share">

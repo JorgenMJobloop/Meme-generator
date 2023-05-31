@@ -1,4 +1,4 @@
-const memeIMGsrc = [
+const memeImgSrc = [
   "images/aB26dRZ_460s.jpg",
   "images/dank-meme.gif",
   "images/frog1.png",
@@ -30,7 +30,6 @@ const memeIMGsrc = [
   "images/error.png",
   "images/coding_praising_meme.webp",
 ];
-
 const memeArray = [];
 const genMemeBtn = document.getElementById("new-meme");
 const displayMeme = document.getElementById("display-meme");
@@ -41,12 +40,12 @@ const shareOutputUrl = document.getElementById("share-output");
 async function getDynamicMemes() {
   const response = await fetch("https://api.imgflip.com/get_memes"); // uses the GET HTTP Method.
   const jsonData = await response.json();
-  console.log(jsonData);
-  let outputArray = Object.entries(jsonData);
+  let outputArray = jsonData.data.memes.map(({ url }) => url);
+  let random = Math.floor(Math.random() * outputArray.length);
   for (o in outputArray) {
     outputArray.push(o);
   }
-  displayMeme.innerHTML = `<img src=${outputArray} id="display-meme"/>`;
+  displayMeme.innerHTML = `<img src=${outputArray[random]} id="display-meme"/>`;
 }
 
 // Removed old comments of previous code.
@@ -57,10 +56,10 @@ async function getDynamicMemes() {
 function debugDisplay(random, indexAt) {
   const outputArr = [];
   shareNewUrl.textContent = "Share this meme!";
-  random = Math.floor(Math.random() * memeIMGsrc.length);
-  for (let i = 0; i < memeIMGsrc.length; i++) {
+  random = Math.floor(Math.random() * memeImgSrc.length);
+  for (let i = 0; i < memeImgSrc.length; i++) {
     indexAt += 1;
-    outputArr.push(memeIMGsrc[i]);
+    outputArr.push(memeImgSrc[i]);
     if (indexAt > outputArr.length) {
       break;
     } else {
