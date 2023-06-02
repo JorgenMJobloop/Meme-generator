@@ -30,7 +30,8 @@ const memeImgSrc = [
   "images/error.png",
   "images/coding_praising_meme.webp",
 ];
-const memeArray = [];
+
+let memeImgSrcRandomIdx;
 const genMemeBtn = document.getElementById("new-meme");
 const displayMeme = document.getElementById("display-meme");
 const shareSpan = document.getElementById("share");
@@ -40,44 +41,36 @@ const shareOutputUrl = document.getElementById("share-output");
 async function getDynamicMemes() {
   const response = await fetch("https://api.imgflip.com/get_memes"); // uses the GET HTTP Method.
   const jsonData = await response.json();
-  let outputArray = jsonData.data.memes.map(({ url }) => url);
-  let random = Math.floor(Math.random() * outputArray.length);
-  for (o in outputArray) {
-    outputArray.push(o);
-  }
-  displayMeme.innerHTML = `<img src=${outputArray[random]} id="display-meme"/>`;
-}
 
-// Removed old comments of previous code.
-// takes in two parameters, random and indexAt.
-// random "randomizes" the index of the image in the array.
-// and indexAt iterates through the elements lenght starting from 0.
+  const outputArray = jsonData.data.memes.map(({ url }) => url);
+  const random = Math.floor(Math.random() * outputArray.length);
 
-function debugDisplay(random, indexAt) {
-  const outputArr = [];
+  for (const output in outputArray) outputArray.push(output);
+
+  displayMeme.src = outputArray[random];
   shareNewUrl.textContent = "Share this meme!";
-  random = Math.floor(Math.random() * memeImgSrc.length);
-  for (let i = 0; i < memeImgSrc.length; i++) {
-    indexAt += 1;
-    outputArr.push(memeImgSrc[i]);
-    if (indexAt > outputArr.length) {
-      break;
-    } else {
-      continue;
-    }
-  }
-  if (outputArr[random] === outputArr.indexOf(random)) {
-    outputArr.push(indexAt);
-  }
-  displayMeme.innerHTML = `<img src=${outputArr[
-    random
-  ].split()} id="display-meme"/>`; // prefer textContent over innerHTML.
-  shareNewUrl.addEventListener("click", function (prefix, copyUrl) {
-    prefix = `${outputArr[random]}`;
-    copyUrl = window.location.href.concat(prefix).replace("/index.html", "/");
-    navigator.clipboard.writeText(copyUrl);
-    shareOutputUrl.textContent = "Image link copied to clipboard";
-  });
-  shareOutputUrl.textContent = "";
-  return memeArray;
 }
+
+function debugDisplay() {
+  let random = Math.floor(Math.random() * memeImgSrc.length);
+
+  while (random === memeImgSrcRandomIdx)
+    random = Math.floor(Math.random() * memeImgSrc.length);
+
+  memeImgSrcRandomIdx = random;
+
+  displayMeme.src = memeImgSrc[random];
+  shareNewUrl.textContent = "Share this meme!";
+}
+
+genMemeBtn.addEventListener("click", function () {
+  const newMemeFunctions = [getDynamicMemes, debugDisplay];
+  const randomIndex = Math.floor(Math.random() * newMemeFunctions.length);
+
+  newMemeFunctions[randomIndex]();
+});
+
+shareNewUrl.addEventListener("click", function () {
+  navigator.clipboard.writeText(displayMeme.src);
+  shareOutputUrl.textContent = "Image link copied to clipboard";
+});
