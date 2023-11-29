@@ -61,7 +61,7 @@ function debugDisplay() {
 
   displayMeme.src = memeImgSrc[random];
   shareNewUrl.textContent = "Share this meme!";
-  console.log("Hello!")
+  console.log("Hello World!");
 }
 
 genMemeBtn.addEventListener("click", function () {
