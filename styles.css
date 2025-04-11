@@ -10,10 +10,10 @@ body {
   background: rgb(37, 142, 166);
   background: linear-gradient(
     90deg,
-    rgba(37, 142, 166, 1) 0%,
-    rgba(19, 177, 213, 1) 47%,
-    rgba(19, 176, 212, 1) 48%,
-    rgba(37, 142, 166, 1) 100%
+    rgb(24, 31, 32) 0%,
+    rgb(4, 49, 59) 7%,
+    rgb(37, 47, 49) 48%,
+    rgb(3, 13, 15) 100%
   );
   line-break: normal;
   min-height: 100vh;
